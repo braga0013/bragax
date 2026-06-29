@@ -4,6 +4,12 @@ import { WA_LINK } from '../constants'
 
 const plans = [
   {
+    name: 'Landing Page',
+    price: 'R$ 250',
+    desc: 'Página única focada em conversão. Ideal para divulgar um produto, serviço ou capturar leads.',
+    featured: false,
+  },
+  {
     name: 'Página + Catálogo',
     price: 'R$ 300',
     desc: 'Site institucional com catálogo de produtos ou serviços. Ideal para dar o primeiro passo no digital.',
@@ -77,13 +83,13 @@ export function Pricing() {
           </motion.p>
         </div>
 
-        {/* Plan cards: row of 3, then row of 2 centered */}
+        {/* Plan cards: row of 3, then row of 3 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           {plans.slice(0, 3).map((plan, i) => (
             <PlanCard key={plan.name} plan={plan} index={i} prefersReduced={!!prefersReduced} />
           ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:max-w-[66.666%] lg:mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {plans.slice(3).map((plan, i) => (
             <PlanCard key={plan.name} plan={plan} index={i + 3} prefersReduced={!!prefersReduced} />
           ))}
