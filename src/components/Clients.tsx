@@ -14,6 +14,18 @@ const clients = [
     instagram: 'https://www.instagram.com/barbearia_do_rian_/',
     handle: '@barbearia_do_rian_',
   },
+  {
+    name: 'Mais Recovery',
+    category: 'Saude & Recuperacao',
+    instagram: 'https://www.instagram.com/maisrecovery_/',
+    handle: '@maisrecovery_',
+  },
+  {
+    name: 'Dra. Ana Luisa',
+    category: 'Fisioterapia',
+    instagram: 'https://www.instagram.com/analuisafisio_/',
+    handle: '@analuisafisio_',
+  },
 ]
 
 export function Clients() {
