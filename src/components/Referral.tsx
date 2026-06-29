@@ -3,11 +3,12 @@ import { Gift, WhatsappLogo } from '@phosphor-icons/react'
 import { WA_LINK } from '../constants'
 
 const commissions = [
-  { plan: 'Página + Catálogo', commission: 'R$ 100/mês' },
-  { plan: 'Sistemas de Gestão', commission: 'R$ 100/mês' },
-  { plan: 'E-commerce Simples', commission: 'R$ 150/mês' },
-  { plan: 'E-commerce Completo', commission: 'R$ 250/mês' },
-  { plan: 'Plataforma de Atendimento', commission: 'R$ 250/mês' },
+  { plan: 'Landing Page', value: 'R$ 250', commission: 'R$ 90' },
+  { plan: 'Página Inicial + Catálogo', value: 'R$ 300', commission: 'R$ 110' },
+  { plan: 'Sistemas de Gestão', value: 'R$ 300', commission: 'R$ 110' },
+  { plan: 'E-commerce sem pagamento integrado', value: 'R$ 400', commission: 'R$ 145' },
+  { plan: 'E-commerce Completo', value: 'R$ 700', commission: 'R$ 250' },
+  { plan: 'Plataforma de Atendimento + Pagamento', value: 'R$ 700', commission: 'R$ 250' },
 ]
 
 export function Referral() {
@@ -82,11 +83,10 @@ export function Referral() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="bg-[#111111] border border-white/8"
           >
-            <div className="px-6 py-4 border-b border-white/8 flex justify-between items-center">
+            <div className="px-6 py-4 border-b border-white/8 grid grid-cols-3 gap-2">
               <span className="text-xs font-mono uppercase tracking-widest text-white/40">Plano</span>
-              <span className="text-xs font-mono uppercase tracking-widest text-white/40">
-                Sua Comissao
-              </span>
+              <span className="text-xs font-mono uppercase tracking-widest text-white/40 text-center">Valor</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-white/40 text-right">Sua Comissao</span>
             </div>
 
             <div className="divide-y divide-white/5">
@@ -101,10 +101,11 @@ export function Referral() {
                     delay: 0.2 + i * 0.06,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="flex items-center justify-between px-6 py-4 hover:bg-white/2 transition-colors duration-200"
+                  className="grid grid-cols-3 gap-2 items-center px-6 py-4 hover:bg-white/2 transition-colors duration-200"
                 >
                   <span className="text-sm text-white/70">{item.plan}</span>
-                  <span className="text-sm font-bold text-[#00C2FF]">{item.commission}</span>
+                  <span className="text-sm text-white/40 text-center">{item.value}</span>
+                  <span className="text-sm font-bold text-[#00C2FF] text-right">{item.commission}</span>
                 </motion.div>
               ))}
             </div>
