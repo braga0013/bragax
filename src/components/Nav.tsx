@@ -24,7 +24,7 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         <a href="#" className="font-bold text-lg tracking-tight leading-none">
-          BRAGAX <span className="text-[#00C2FF]">TECH</span>
+          BRAGAX<span className="text-[#00C2FF]">TECH</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-white/60">

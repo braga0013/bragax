@@ -1,40 +1,47 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { Check, WhatsappLogo, Globe, Headset, Clock, EnvelopeSimple, ArrowUpRight } from '@phosphor-icons/react'
+import { Link } from 'react-router-dom'
 import { WA_LINK } from '../constants'
 
 const plans = [
   {
     name: 'Landing Page',
+    slug: 'landing-page',
     price: 'R$ 250',
     desc: 'Página única focada em conversão. Ideal para divulgar um produto, serviço ou capturar leads.',
     featured: false,
   },
   {
     name: 'Página + Catálogo',
+    slug: 'site-institucional-catalogo',
     price: 'R$ 300',
     desc: 'Site institucional com catálogo de produtos ou serviços. Ideal para dar o primeiro passo no digital.',
     featured: false,
   },
   {
     name: 'Sistemas de Gestão',
+    slug: 'sistema-de-gestao',
     price: 'R$ 300',
     desc: 'Painel completo para controlar estoque, vendas e clientes. Sua operação no controle.',
     featured: false,
   },
   {
     name: 'E-commerce Simples',
+    slug: 'ecommerce',
     price: 'R$ 400',
     desc: 'Loja virtual sem integração de pagamento online. Venda com entrega e pagamento combinado.',
     featured: false,
   },
   {
     name: 'E-commerce Completo',
+    slug: 'ecommerce',
     price: 'R$ 700',
     desc: 'Loja virtual com pagamento online integrado, checkout automático e painel de pedidos.',
     featured: true,
   },
   {
     name: 'Plataforma de Atendimento',
+    slug: 'plataforma-de-atendimento',
     price: 'R$ 700',
     desc: 'Central de atendimento com WhatsApp integrado e cobrança online no mesmo lugar.',
     featured: true,
@@ -123,7 +130,7 @@ export function Pricing() {
 }
 
 interface PlanCardProps {
-  plan: { name: string; price: string; desc: string; featured: boolean }
+  plan: { name: string; slug: string; price: string; desc: string; featured: boolean }
   index: number
   prefersReduced: boolean
 }
@@ -160,19 +167,27 @@ function PlanCard({ plan, index, prefersReduced }: PlanCardProps) {
 
       <p className="text-sm text-white/50 leading-relaxed mb-8 flex-1">{plan.desc}</p>
 
-      <a
-        href={WA_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`flex items-center justify-center gap-2 py-3 text-sm font-semibold transition-colors duration-200 ${
-          plan.featured
-            ? 'bg-[#00C2FF] text-[#0A0A0A] hover:bg-[#00aadf]'
-            : 'border border-white/15 text-white/80 hover:border-[#00C2FF] hover:text-[#00C2FF]'
-        }`}
-      >
-        <WhatsappLogo size={16} weight="fill" />
-        Contratar
-      </a>
+      <div className="flex flex-col gap-2">
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center justify-center gap-2 py-3 text-sm font-semibold transition-colors duration-200 ${
+            plan.featured
+              ? 'bg-[#00C2FF] text-[#0A0A0A] hover:bg-[#00aadf]'
+              : 'border border-white/15 text-white/80 hover:border-[#00C2FF] hover:text-[#00C2FF]'
+          }`}
+        >
+          <WhatsappLogo size={16} weight="fill" />
+          Contratar
+        </a>
+        <Link
+          to={`/servicos/${plan.slug}`}
+          className="text-center text-xs text-white/40 hover:text-[#00C2FF] transition-colors duration-200 py-1"
+        >
+          Saiba mais
+        </Link>
+      </div>
     </motion.div>
   )
 }

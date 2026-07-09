@@ -1,25 +1,40 @@
-import { readFileSync, writeFileSync, rmSync } from 'node:fs'
+import { readFileSync, writeFileSync, rmSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
 
-const { render } = await import(path.resolve(root, 'dist-ssr/entry-server.js'))
+const { render, routes } = await import(path.resolve(root, 'dist-ssr/entry-server.js'))
 
-const appHtml = render()
+const templatePath = path.resolve(root, 'dist/index.html')
+const template = readFileSync(templatePath, 'utf-8')
 
-const indexPath = path.resolve(root, 'dist/index.html')
-const template = readFileSync(indexPath, 'utf-8')
+for (const route of routes) {
+  const appHtml = render(route.url)
 
-const finalHtml = template.replace(
-  '<div id="root"></div>',
-  `<div id="root">${appHtml}</div>`
-)
+  let html = template
+    .replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`)
+    .replace(
+      /<meta name="description" content=".*?" \/>/,
+      `<meta name="description" content="${route.description}" />`
+    )
+    .replace(
+      /<meta property="og:title" content=".*?" \/>/,
+      `<meta property="og:title" content="${route.title}" />`
+    )
+    .replace(
+      /<meta property="og:description" content=".*?" \/>/,
+      `<meta property="og:description" content="${route.description}" />`
+    )
+    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
 
-writeFileSync(indexPath, finalHtml)
+  const outDir = path.resolve(root, 'dist', route.outDir)
+  mkdirSync(outDir, { recursive: true })
+  writeFileSync(path.join(outDir, 'index.html'), html)
+}
 
-// Limpa o bundle SSR intermediário, não faz parte do deploy final
+// Limpa o bundle SSR intermediario, nao faz parte do deploy final
 rmSync(path.resolve(root, 'dist-ssr'), { recursive: true, force: true })
 
-console.log('✓ Pré-renderização concluída: HTML estático injetado em dist/index.html')
+console.log(`Pre-renderizacao concluida: ${routes.length} paginas geradas`)
