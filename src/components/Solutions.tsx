@@ -42,7 +42,7 @@ export function Solutions() {
           className="mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            O que a Bragax Tech{' '}
+            O que a BragaxTech{' '}
             <span className="text-[#00C2FF]">desenvolve</span>
           </h2>
         </motion.div>

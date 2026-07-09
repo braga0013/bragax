@@ -54,7 +54,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <p className="text-xs text-white/20">
-            &copy; {year} Bragax Tech. Todos os direitos reservados.
+            &copy; {year} BragaxTech. Todos os direitos reservados.
           </p>
           <p className="text-xs text-white/15 font-mono">Porto Alegre, RS</p>
         </div>

@@ -56,7 +56,7 @@ export function Referral() {
 
             <h3 className="text-xl font-bold mb-4">Como funciona?</h3>
             <p className="text-white/60 leading-relaxed mb-6">
-              Indique um cliente para a Bragax Tech. Se ele contratar qualquer plano, você passa a
+              Indique um cliente para a BragaxTech. Se ele contratar qualquer plano, você passa a
               receber uma comissao mensal recorrente enquanto ele mantiver o servico ativo.
             </p>
             <p className="text-white/60 leading-relaxed mb-8">

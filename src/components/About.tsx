@@ -32,11 +32,11 @@ export function About() {
           transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
-            Sobre a Bragax Tech
+            Sobre a BragaxTech
           </h2>
 
           <p className="text-white/65 leading-relaxed mb-4">
-            A Bragax Tech e uma empresa de tecnologia sediada em Porto Alegre, especializada em
+            A BragaxTech e uma empresa de tecnologia sediada em Porto Alegre, especializada em
             solucoes digitais para pequenos e medios negocios. Desenvolvemos e-commerces, sistemas
             de gestao, automacoes e plataformas de atendimento com qualidade e preco justo.
           </p>

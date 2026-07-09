@@ -96,7 +96,7 @@ export function Hero() {
           >
             <img
               src="/imgs/bragax_logo.png"
-              alt="Símbolo Bragax Tech"
+              alt="Símbolo BragaxTech"
               className="w-full max-w-[540px] xl:max-w-[620px] select-none"
               draggable={false}
             />
