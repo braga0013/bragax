@@ -16,7 +16,7 @@ export function Nav() {
       initial={{ y: -64, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 inset-x-0 z-50 h-16 transition-all duration-300 ${
+      className={`fixed top-9 inset-x-0 z-50 h-16 transition-all duration-300 ${
         scrolled
           ? 'bg-[#0A0A0A]/95 backdrop-blur-sm border-b border-white/5'
           : 'bg-transparent'

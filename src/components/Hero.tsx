@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { WhatsappLogo, ArrowDown } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK_FOUNDER } from '../constants'
 
 export function Hero() {
   const prefersReduced = useReducedMotion()
@@ -33,8 +33,8 @@ export function Hero() {
         }}
       />
 
-      <div className="relative w-full pt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[calc(100dvh-4rem)]">
+      <div className="relative w-full pt-[6.25rem]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[calc(100dvh-6.25rem)]">
           {/* Left: content */}
           <div className="py-16 lg:py-0 flex flex-col justify-center">
             {/* Accent line */}
@@ -56,9 +56,10 @@ export function Hero() {
 
             <motion.p
               {...(fadeUp(0.25) as object)}
-              className="text-xl text-white/65 font-medium leading-snug mb-12 max-w-[340px]"
+              className="text-xl text-white/65 font-medium leading-snug mb-12 max-w-[420px]"
             >
-              Seu negócio no digital com planos mensais
+              Sua Plataforma Sob Medida Sem Custo de Criação.{' '}
+              <span className="text-[#00C2FF]">Zero Taxa de Setup.</span>
             </motion.p>
 
             <motion.div
@@ -66,19 +67,19 @@ export function Hero() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
-                href={WA_LINK}
+                href={WA_LINK_FOUNDER}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-bold text-base px-8 py-4 hover:bg-[#20b558] transition-colors duration-200 active:scale-[0.98]"
               >
                 <WhatsappLogo size={20} weight="fill" />
-                Falar no WhatsApp
+                Travar minha mensalidade
               </a>
               <a
                 href="#planos"
                 className="inline-flex items-center justify-center gap-2 border border-white/20 text-white/80 font-semibold text-base px-8 py-4 hover:border-[#00C2FF] hover:text-[#00C2FF] transition-colors duration-200 group"
               >
-                Ver planos
+                Garantir Preço de Fundador
                 <ArrowDown
                   size={18}
                   className="group-hover:translate-y-0.5 transition-transform duration-200"
