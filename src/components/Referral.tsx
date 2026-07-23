@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { Gift, WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 
 const commissions = [
   { plan: 'Landing Page', value: 'R$ 250', commission: 'R$ 90' },
@@ -66,6 +66,7 @@ export function Referral() {
 
             <a
               href={WA_LINK}
+              onClick={trackWhatsAppClick}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 hover:bg-[#20b558] transition-colors duration-200 active:scale-[0.98]"

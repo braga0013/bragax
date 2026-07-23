@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 
 export function WhatsAppButton() {
   const prefersReduced = useReducedMotion()
@@ -8,6 +8,7 @@ export function WhatsAppButton() {
   return (
     <motion.a
       href={WA_LINK}
+      onClick={trackWhatsAppClick}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

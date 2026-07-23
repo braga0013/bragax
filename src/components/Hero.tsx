@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { WhatsappLogo, ArrowDown } from '@phosphor-icons/react'
-import { WA_LINK_FOUNDER } from '../constants'
+import { WA_LINK_FOUNDER, trackWhatsAppClick } from '../constants'
 
 export function Hero() {
   const prefersReduced = useReducedMotion()
@@ -68,6 +68,7 @@ export function Hero() {
             >
               <a
                 href={WA_LINK_FOUNDER}
+                onClick={trackWhatsAppClick}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white font-bold text-base px-8 py-4 hover:bg-[#20b558] transition-colors duration-200 active:scale-[0.98]"

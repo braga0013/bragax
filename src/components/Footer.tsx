@@ -1,5 +1,5 @@
 import { WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -47,6 +47,7 @@ export function Footer() {
             </p>
             <a
               href={WA_LINK}
+              onClick={trackWhatsAppClick}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-white/50 hover:text-[#25D366] transition-colors duration-200"

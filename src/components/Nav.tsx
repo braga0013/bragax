@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useScroll, useMotionValueEvent } from 'motion/react'
 import { WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 
 export function Nav() {
   const { scrollY } = useScroll()
@@ -44,6 +44,7 @@ export function Nav() {
 
         <a
           href={WA_LINK}
+          onClick={trackWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-4 py-2 hover:bg-[#20b558] transition-colors duration-200 active:scale-[0.97]"

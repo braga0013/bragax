@@ -10,7 +10,7 @@ import {
   Lightning,
 } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
-import { WA_LINK, WA_LINK_FOUNDER } from '../constants'
+import { WA_LINK, WA_LINK_FOUNDER, trackWhatsAppClick } from '../constants'
 
 const plans = [
   {
@@ -258,6 +258,7 @@ function PlanCard({ plan, index, prefersReduced }: PlanCardProps) {
       <div className="flex flex-col gap-2">
         <a
           href={plan.featured ? WA_LINK_FOUNDER : WA_LINK}
+          onClick={trackWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
           className={`flex items-center justify-center gap-2 py-3 text-sm font-semibold transition-colors duration-200 ${

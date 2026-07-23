@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { Check, WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 import { services, included } from '../services-data'
 
 export function ServicePage() {
@@ -37,6 +37,7 @@ export function ServicePage() {
 
         <a
           href={WA_LINK}
+          onClick={trackWhatsAppClick}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#00C2FF] text-[#0A0A0A] text-sm font-semibold px-6 py-3 hover:bg-[#00aadf] transition-colors duration-200 mb-16"

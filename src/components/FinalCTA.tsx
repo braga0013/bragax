@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { WhatsappLogo } from '@phosphor-icons/react'
-import { WA_LINK } from '../constants'
+import { WA_LINK, trackWhatsAppClick } from '../constants'
 
 export function FinalCTA() {
   const prefersReduced = useReducedMotion()
@@ -43,6 +43,7 @@ export function FinalCTA() {
         >
           <a
             href={WA_LINK}
+            onClick={trackWhatsAppClick}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] text-white font-bold text-lg px-10 py-5 hover:bg-[#20b558] transition-colors duration-200 active:scale-[0.98] shadow-[0_0_40px_rgba(37,211,102,0.3)] hover:shadow-[0_0_60px_rgba(37,211,102,0.4)]"
