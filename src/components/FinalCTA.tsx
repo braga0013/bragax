@@ -22,7 +22,7 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6"
         >
           Pronto para levar seu{' '}
-          <span className="text-[#00C2FF]">negocio ao digital?</span>
+          <span className="text-[#00C2FF]">negócio ao digital?</span>
         </motion.h2>
 
         <motion.p

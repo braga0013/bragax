@@ -11,10 +11,10 @@ export function Footer() {
           {/* Brand */}
           <div>
             <p className="font-bold text-lg tracking-tight mb-3">
-              BRAGAX <span className="text-[#00C2FF]">TECH</span>
+              BRAGAX<span className="text-[#00C2FF]">TECH</span>
             </p>
             <p className="text-xs text-white/35 leading-relaxed max-w-[200px]">
-              Solucoes digitais para pequenos e medios negocios. Porto Alegre, RS.
+              Soluções digitais para pequenos e médios negócios. Porto Alegre, RS.
             </p>
           </div>
 
@@ -22,13 +22,18 @@ export function Footer() {
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-white/30 mb-4">Navegue</p>
             <ul className="space-y-2">
-              {['Solucoes', 'Planos', 'Indicacao', 'Sobre'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'Soluções', id: 'solucoes' },
+                { label: 'Planos', id: 'planos' },
+                { label: 'Indicação', id: 'indicacao' },
+                { label: 'Sobre', id: 'sobre' },
+              ].map((item) => (
+                <li key={item.id}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.id}`}
                     className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}

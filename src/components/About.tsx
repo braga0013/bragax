@@ -36,13 +36,13 @@ export function About() {
           </h2>
 
           <p className="text-white/65 leading-relaxed mb-4">
-            A BragaxTech e uma empresa de tecnologia sediada em Porto Alegre, especializada em
-            solucoes digitais para pequenos e medios negocios. Desenvolvemos e-commerces, sistemas
-            de gestao, automacoes e plataformas de atendimento com qualidade e preco justo.
+            A BragaxTech é uma empresa de tecnologia sediada em Porto Alegre, especializada em
+            soluções digitais para pequenos e médios negócios. Desenvolvemos e-commerces, sistemas
+            de gestão, automações e plataformas de atendimento com qualidade e preço justo.
           </p>
           <p className="text-white/65 leading-relaxed mb-8">
-            Nossa missao e simples: colocar qualquer negocio no digital com o menor atrito possivel.
-            Planos mensais acessiveis, suporte continuo e resultados reais.
+            Nossa missão é simples: colocar qualquer negócio no digital com o menor atrito possível.
+            Planos mensais acessíveis, suporte contínuo e resultados reais.
           </p>
 
           <div className="flex items-center gap-2 text-sm text-white/40">

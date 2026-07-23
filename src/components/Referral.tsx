@@ -57,10 +57,10 @@ export function Referral() {
             <h3 className="text-xl font-bold mb-4">Como funciona?</h3>
             <p className="text-white/60 leading-relaxed mb-6">
               Indique um cliente para a BragaxTech. Se ele contratar qualquer plano, você passa a
-              receber uma comissao mensal recorrente enquanto ele mantiver o servico ativo.
+              receber uma comissão mensal recorrente enquanto ele mantiver o serviço ativo.
             </p>
             <p className="text-white/60 leading-relaxed mb-8">
-              Sem limite de indicacoes. Quanto mais voce indica, mais voce ganha. Sem
+              Sem limite de indicações. Quanto mais você indica, mais você ganha. Sem
               burocracia e sem prazo de validade.
             </p>
 
@@ -86,7 +86,7 @@ export function Referral() {
             <div className="px-6 py-4 border-b border-white/8 grid grid-cols-3 gap-2">
               <span className="text-xs font-mono uppercase tracking-widest text-white/40">Plano</span>
               <span className="text-xs font-mono uppercase tracking-widest text-white/40 text-center">Valor</span>
-              <span className="text-xs font-mono uppercase tracking-widest text-white/40 text-right">Sua Comissao</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-white/40 text-right">Sua Comissão</span>
             </div>
 
             <div className="divide-y divide-white/5">

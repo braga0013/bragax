@@ -41,7 +41,7 @@ export function Clients() {
           transition={{ duration: 0.6 }}
           className="text-sm text-white/35 uppercase tracking-[0.2em] font-mono mb-12"
         >
-          Quem ja confia na Bragax
+          Quem já confia na Bragax
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
