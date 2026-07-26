@@ -9,6 +9,15 @@ export const WA_LINK = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(GENE
 
 export const WA_LINK_FOUNDER = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(FOUNDER_MESSAGE)}`
 
+/**
+ * Gera o link de WhatsApp com o nome do plano/serviço já na mensagem,
+ * para o lead chegar identificado (evita mensagem genérica sem contexto).
+ */
+export function getServiceWaLink(serviceName: string) {
+  const message = `Olá, vim pelo site da BragaxTech e quero saber mais sobre o plano ${serviceName}!`
+  return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`
+}
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
