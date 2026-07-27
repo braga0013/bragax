@@ -21,17 +21,21 @@ export function getServiceWaLink(serviceName: string) {
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
+    fbq?: (...args: unknown[]) => void
   }
 }
 
 /**
- * Dispara a conversão "Clique WhatsApp" no Google Ads.
- * Usar no onClick de todo link que aponte para WA_LINK ou WA_LINK_FOUNDER.
+ * Dispara a conversão "Clique WhatsApp" no Google Ads e o evento "Contact"
+ * no Meta Pixel. Usar no onClick de todo link que aponte para WA_LINK ou WA_LINK_FOUNDER.
  */
 export function trackWhatsAppClick() {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', 'conversion', {
       send_to: 'AW-16751799172/b6QzCOG5wtUcEITX8LM-',
     })
+  }
+  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+    window.fbq('track', 'Contact')
   }
 }
